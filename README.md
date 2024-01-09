@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Live Demo http://in-play-golf.s3-website.eu-west-2.amazonaws.com/
 
 ## Available Scripts
 
