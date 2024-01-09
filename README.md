@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Getting Started
 
-# Live Demo http://in-play-golf.s3-website.eu-west-2.amazonaws.com/
+## Live Demo http://in-play-golf.s3-website.eu-west-2.amazonaws.com/
+
+In this project, I used React, React Router, and Material-UI to create a user-friendly web application. React allowed me to build a dynamic interface, and React Router enabled smooth and efficient navigation. I chose Material-UI for its sleek design components.
+
+I also placed a strong emphasis on the application's performance. By utilizing Google's Lighthouse tool, I optimized the app in areas like speed and accessibility. I am proud to have achieved a 100% score in the Lighthouse assessment, which reflects my dedication to delivering a top-quality web application.
+
+Overall, my choice of React, React Router, and Material-UI, coupled with a rigorous focus on performance optimization, resulted in a robust, fast, and highly engaging application
 
 ## Available Scripts
 
