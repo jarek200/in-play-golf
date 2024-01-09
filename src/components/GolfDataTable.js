@@ -3,6 +3,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import { getMedal } from '../utils/getPositionMedal'
 import HolesList from './HolesList'
 import filterScoreboardPlayers from '../utils/filterScoreboardPlayers'
+import { Link } from 'react-router-dom'
 
 const GolfDataTable = ({ playersData, holesNumber = 18 }) => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -35,7 +36,9 @@ const GolfDataTable = ({ playersData, holesNumber = 18 }) => {
                     {getMedal(player.position)}
                   </TableCell>
                   <TableCell>
-                    {player.First} {player.Last}
+                    <Link to={`/player/${player.MSTID}`}>
+                      {player.First} {player.Last}
+                    </Link>
                   </TableCell>
                   {Array.from({ length: holesNumber }, (_, i) => i + 1).map(hole => {
                     const strokeKey = `Hole${hole}Strokes`
