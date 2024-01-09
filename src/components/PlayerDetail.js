@@ -8,10 +8,6 @@ const PlayerDetail = ({ playersData, headerText }) => {
   const { id } = useParams()
   const player = playersData.find(p => p.MSTID === Number(id))
 
-  if (!player) {
-    return <div>Player not found</div>
-  }
-
   const gender = player.Sex === 'M' ? 'Male' : player.Sex === 'F' ? 'Female' : 'Not specified'
 
   return (
