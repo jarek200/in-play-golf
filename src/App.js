@@ -1,12 +1,15 @@
 import React from 'react'
-import SocketIOComponent from './SocketIOComponent'
 
+import GolfDataTable from './components/GolfDataTable'
+import useGetPlayersData from './hooks/useGetPlayersData'
+import StyledHeader from './components/StyledHeader'
 function App() {
+  const playersData = useGetPlayersData()
   return (
-    <div>
-      <h1>In Play Golf Score Table</h1>
-      <SocketIOComponent />
-    </div>
+    <>
+      <StyledHeader text='In Play Golf Score Table' />
+      <GolfDataTable playersData={playersData} holesNumber={18} />
+    </>
   )
 }
 

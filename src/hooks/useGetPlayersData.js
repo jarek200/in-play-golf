@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import io from 'socket.io-client'
-import GolfDataTable from './GolfDataTable'
-import { sortAndRankPlayers } from './utils/sortAndRankPlayers' // Make sure this utility is properly implemented
+import { sortAndRankPlayers } from '../utils/sortAndRankPlayers'
 
-const SocketIOComponent = () => {
+const useGetPlayersData = () => {
   const [playersData, setPlayersData] = useState([])
 
   useEffect(() => {
@@ -27,11 +26,7 @@ const SocketIOComponent = () => {
     }
   }, [])
 
-  return (
-    <div>
-      <GolfDataTable playersData={playersData} holesNumber={18} />
-    </div>
-  )
+  return playersData
 }
 
-export default SocketIOComponent
+export default useGetPlayersData
