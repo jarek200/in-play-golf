@@ -4,8 +4,9 @@ import { getMedal } from '../utils/getPositionMedal'
 import HolesList from './HolesList'
 import filterScoreboardPlayers from '../utils/filterScoreboardPlayers'
 import { Link } from 'react-router-dom'
+import StyledHeader from './StyledHeader'
 
-const GolfDataTable = ({ playersData, holesNumber = 18 }) => {
+const GolfDataTable = ({ playersData, holesNumber = 18, headerText }) => {
   const [searchTerm, setSearchTerm] = useState('')
 
   const handleSearchChange = event => {
@@ -16,6 +17,7 @@ const GolfDataTable = ({ playersData, holesNumber = 18 }) => {
 
   return (
     <>
+      <StyledHeader text={headerText} />
       <TextField label='Search Players' variant='outlined' fullWidth margin='normal' onChange={handleSearchChange} />
       <TableContainer component={Paper} elevation={3}>
         <Table aria-label='golf data table'>
